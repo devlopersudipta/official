@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Method for Colab</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .topbar{
+      position: ;
+      top: 0;
+      z-index: 1000000;
+      border-bottom: 2px solid gold;
+    }
+    
+    .topbar .text{
+      color: white;
+      justify-content: center;
+      font-size: 4.5vw;
+      padding-top: 4vw;
+      padding-left: 22vw
+    }
+    .content .top{
+      text-align: justify;
+      font-size: 5vw;
+      font-weight: 500;
+      padding: 2vw;
+      letter-spacing: -0.2vw;
+    }
+    .content .steps .heading{
+      color: darkolivegreen;
+      font-weight: bold;
+      padding-left: 3vw;
+    }
+    .content .steps .paragraph{
+      text-align: justify;
+      font-size: 5vw;
+      padding: 15vw;
+    }
+    .content .steps .paragraph .code{
+      display: flex;
+      position: relative;
+      font-size: 3.5vw;
+      width : 70vw;
+      height: 30vh;
+      background-color: black;
+      color: white;
+      margin: 1vh;
+      border: aqua solid 2px;
+      border-radius: 4vw;
+    }
+    .content .steps .paragraph .code font{
+      display: flex;
+      position: relative;
+      padding: 4vh;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="#">Websites</a>
+      <a href="method.html">Method</a>
+      <a href="#">Contact_Me</a>
+    </div>
+  </div>
+  
+  <div class="content">
+    <div class="top">
+      We can make apps easily using google colab. The steps are in bellow.
+    </div><br><br><br>
+    <div class="steps">
+      <div class="heading">
+        STEP-1 -->
+      </div>
+      <div class="paragraph">
+        <ol type="1">
+          <li>
+            <font>At frist you need to go to the official website of <a href="https://colab.research.google.com/">Google Colab</a>
+            </font>
+          </li><br />
+          <li>
+        
+            <font>
+              Then Login with your Google account. Then close the browser.
+            </font>
+          </li><br>
+          <li>
+            <font>Now go to the same website of <a href="  https://colab.research.google.com/">Google Colab</a>. Press on the new notebook.
+            </font>
+          </li><br>
+          <li>Now copy the commands step by step and keep executing one by one.
+          </li><br>
+          <div class="code">
+            <font>
+              !sudo apt update<br>!sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev<br>!pip3 install --user --upgrade Cython==0.29.33 virtualenv
+            </font>
+          </div>
+          <div class="code">
+            <font style="padding-top: 8vh;">
+              !git clone https://github.com/kivy/buildozer<br>%cd buildozer<br>!python setup.py build<br>!pip install -e .<br>%cd ..
+            </font>
+          </div><br>
+          <li>
+            Now upload your main.py (main python file) file and the other needed items for the app.
+          </li><br>
+          <li>
+            Then run the command (available in the bellow) and press 'y' + 'Enter' on your keyboard if requries.
+          </li><br>
+          <div class="code" style="height: 5vh;">
+            <font style="padding-top: 1.2vh;">!buildozer init</font>  
+          </div><br>
+          <li>
+            <font>
+              Now you can see that a new file named "builozer.spec" file is created.<br>Double click on the file to edit. In here you need to do some changes.
+            </font><br><br><br>
+            <h3 align='center'>Changes in <u>buildozer.spec</u> file</h3><br>
+            <ul type='square'>
+              <li><i>App Name</i></li>
+              <li><i>App Domain</i></li>
+              <li><i>Package Name</i></li>
+              <li><i>Requrements<br><br>
+              <font>This is most important because most of the devloper fails to make apk for it.<br>
+              You need to specifi the module and libries used in your application . you have to maintion the version also which you are using in your device.</font>
+              </i></li><br>
+              <li><i>Permission(if requries)</i></li>
+              <li><i>Icon path</i></li>
+              <li><i>Splash screen path</i></li>
+            </ul>
+          </li><br>
+          <li style="text-align: left;">Now run the Last commond. And wait for 15-20 minutes until fully execution.</li><br>
+          <div class="code" style="height: 5vh;">
+            <font style="padding-top: 1.4vh;">!buildozer -v android debug</font>
+          </div><br>
+          <li>Now you can find your apk in the bin folder of the file browser.</li><br>
+          <li>Right click in it and download.</li><br>
+          <li>Enjoy your frist app.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

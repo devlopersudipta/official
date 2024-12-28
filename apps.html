@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apps</title>
+  <link rel="stylesheet" href="style.css">
+  <head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+  <style>
+  .app{
+    display: flex;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 10vh;
+  }
+    .app img{
+      height: 8vh;
+      display: flex;
+      position: relative;
+      padding: 1.7vh;
+    }
+    .app font{
+      display: flex;
+      position: absolute;
+      padding-left: 40vw;
+      padding-top: 4vh;
+      font-size: 6vw;
+      font-weight: 40px;
+    }
+    .app .download{
+      display: flex;
+      position: absolute;
+      background-color: pink;
+      height: 5vh;
+      width: 80vw;
+      margin-left: 2vw;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin-top: 12.5vh;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app .download i{
+      /* display: flex;
+      position: absolute;
+       */
+      margin-right: 5vw;
+      font-size: 5vw;
+    }
+    .app .download span{
+      display: flex;
+      color: green;
+      font-size: 4vw;
+      padding-left: 2vw;
+    }
+    .app .download a i{
+      text-decoration: none;
+      color:black;
+    }
+    .moving-box {
+      width: 200px;
+      height: 50px;
+      color: mediumaquamarine;
+      position: absolute;
+      transition: left 4s,top 4s; /* Smooth transition */
+      z-index: -1000
+        }
+    
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="#">Apps</a>
+      <a href="#">Websites</a>
+      <a href="method.html">Method</a>
+      <a href="#">About-Me</a>
+    </div>
+  </div>
+  <div>
+    <h3 align='center' style="padding-top: 2vh; font-size: 5vw; z-index: 5">Some Apps Made by me.</h3>
+  </div>
+  <div class="app">
+    <img src="icon.png">
+    <font>Moniter</font>
+    <div class="download" style="z-index: 1;">
+      <span>Download it from here</span>
+      <i class="fa-solid fa-arrow-right-long"></i>
+      <a href="https://www.mediafire.com/file/tfvfkpw7obc0fdx/mymonitor-0.1-arm64-v8a_armeabi-v7a-debug.apk/file"><i class="fa-solid fa-download fa-beat-fade fa-5x"></i></a>
+    </div>
+  </div>
+  <div class="app">
+    <img src="percent_icon.png">
+    <font style="padding-left: 24vw;">Percent-calculator</font>
+    <div class="download" style="z-index: 1;">
+      <span>Download it from here</span>
+      <i class="fa-solid fa-arrow-right-long"></i>
+      <a href="https://www.mediafire.com/file/398fe0yt551qem4/my_calculator.apk/file"><i class="fa-solid fa-download fa-beat-fade fa-5x"></i></a>
+    </div>
+  </div>
+  <div class="app">
+  <img src="calc_icon.png">
+  <font style="padding-left: 30vw;">Calculator</font>
+  <div class="download" style="z-index: 1;">
+    <span>Download it from here</span>
+    <i class="fa-solid fa-arrow-right-long"></i>
+    <a href="https://www.mediafire.com/file/398fe0yt551qem4/my_calculator.apk/file"><i class="fa-solid fa-download fa-beat-fade fa-5x"></i></a>
+  </div>
+</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="moving-box" id="box">
+    Made by Sudipta
+     <script>
+     function getRandomPosition(max) {
+       return Math.floor(Math.random() * max);
+     }
+  
+     function moveBoxRandomly() {
+       const box = document.getElementById('box');
+       const viewportWidth = window.innerWidth;
+       const viewportHeight = window.innerHeight;
+  
+       // Generate random positions within the viewport
+       const randomLeft = getRandomPosition(viewportWidth - box.offsetWidth);
+       const randomTop = getRandomPosition(viewportHeight - box.offsetHeight);
+  
+       // Set the new positions
+       box.style.left = randomLeft + 'px';
+       box.style.top = randomTop + 'px';
+     }
+  
+     // Move the box to a random position every 2 seconds
+     setInterval(moveBoxRandomly, 2000);
+  
+     // Initial position
+     moveBoxRandomly();
+   </script>
+  </div>
+  
+</body>
+  
+</html>

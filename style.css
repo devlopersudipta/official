@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+ 
+  
+  
+ /*  @font-face {
+ font-family: 'custom_font';
+ src: url('font/dancing.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+ } */
+    .topbar{
+      background-color: black;
+      height:16vw;
+      width: 100vw;
+      word-spacing: 1vw;
+      display: flex;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 3px solid yellowgreen; 
+    }
+    .topbar .links a{
+      text-decoration: none;
+      color:  red;
+      display: inline-flex;
+      padding-top: 2.6vh;
+      font-size: 4vw;
+      padding-left: 2.3vw;
+      justify-content: center;
+      
+    }
+    
+    .container .image_container{
+      display: flex;
+     /*  background-color: blueviolet; */
+      justify-content: center;
+      padding-top: 3.5vh;
+    }
+    .container .image_container img{
+      height:20vw;
+    }
+    .container .name{
+      font-family: "Dancing Script", serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 12vw;
+      display:flex;
+      padding-top: 2vh;
+     justify-content: center;
+    }
+    .container .instration{
+      font-family: "Pangolin", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 5vw;
+      text-align: justify;
+      padding: 3vh;
+      padding-top: 7vh;
+    }
+    .container .wish{
+      text-align: justify;
+      padding: 5vw;
+      padding-top: 4vw;
+      font-family: "Pangolin", serif;
+      font-weight: 200;
+      font-style: normal;
+    }
+    .container .python{
+      padding: 5vw;
+      font-size: 5vw;
+      text-align: justify;
+      font-family: "Pangolin", serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+    .app{
+      color: black;
+      background-color: yellow;
+      height: 12vh;
+      margin: 4vh;
+      border-radius: 2vw;
+      border: 0.3vw solid red;
+      z-index: 10;
+    }
